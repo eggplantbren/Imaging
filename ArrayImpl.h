@@ -1,6 +1,8 @@
 #ifndef _ArrayImpl_
 #define _ArrayImpl_
 
+#include <cassert>
+
 namespace Imaging
 {
 
@@ -20,12 +22,16 @@ Array<Type>::Array(int ni, int nj)
 ,size(ni*nj)
 ,pixels(ni, vector<Type>(nj))
 {
-
+	assert(ni >= 0);
+	assert(nj >= 0);
 }
 
 template<class Type>
 void Array<Type>::resize(int ni, int nj)
 {
+	assert(ni >= 0);
+	assert(nj >= 0);
+
 	this->ni = ni; this->nj = nj;
 	size = ni*nj;
 	pixels.resize(ni, vector<Type>(nj));
