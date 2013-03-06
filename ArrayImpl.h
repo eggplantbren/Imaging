@@ -1,3 +1,6 @@
+#ifndef _ArrayImpl_
+#define _ArrayImpl_
+
 namespace Imaging
 {
 
@@ -53,4 +56,6 @@ void Array<Type>::decrement(const Type& value)
 }
 
 } // namespace Imaging
+
+#endif
 
