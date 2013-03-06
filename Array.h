@@ -3,6 +3,9 @@
 
 #include <vector>
 
+namespace Imaging
+{
+
 class Array
 {
 	protected:
@@ -22,15 +25,17 @@ class Array
 		void decrement(double value);
 
 		// Operator versions of the above
-		Array& operator  = (double value); { set(value); return *this; }
-		Array& operator += (double value); { increment(value); return *this; }
-		Array& operator -= (double value); { decrement(value); return *this; }
+		Array& operator  = (double value) { set(value); return *this; }
+		Array& operator += (double value) { increment(value); return *this; }
+		Array& operator -= (double value) { decrement(value); return *this; }
 
 		// Const and non-const getter
 		double operator() (int i, int j) const { return pixels[i][j]; }
 		double& operator() (int i, int j) { return pixels[i][j]; }
 
 };
+
+}
 
 #endif
 

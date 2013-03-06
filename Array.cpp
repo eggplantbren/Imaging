@@ -1,5 +1,8 @@
 #include "Array.h"
 
+namespace Imaging
+{
+
 using namespace std;
 
 Array::Array()
@@ -44,4 +47,6 @@ void Array::decrement(double value)
 		for(int j=0; j<nj; j++)
 			pixels[i][j] -= value;
 }
+
+} // namespace Imaging
 
