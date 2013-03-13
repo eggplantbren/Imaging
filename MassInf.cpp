@@ -44,6 +44,14 @@ double MassInf::generateMass()
 	return massInverseCDF(randomU());
 }
 
+double MassInf::massLogPDF(double x)
+{
+	double result = -1E300;
+	if(x > 0.)
+		result = -x;
+	return result;
+}
+
 double MassInf::massCDF(double x)
 {
 	double result = 0.;

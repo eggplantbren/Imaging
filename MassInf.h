@@ -24,6 +24,7 @@ class MassInf
 		std::vector<double> x, y, mass;
 
 		// Mass distribution properties
+		virtual double massLogPDF(double x);
 		virtual double massCDF(double x);
 		virtual double massInverseCDF(double x);
 
