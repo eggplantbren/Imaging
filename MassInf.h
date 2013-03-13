@@ -10,7 +10,7 @@ namespace Imaging
 // This class defines a "MassInf" type model
 // with unknown number of point masses appearing
 // in a 2D rectangle with a uniform prior on
-// the positions and (by default) a uniform(0, 1)
+// the positions and (by default) an exponential(1)
 // prior on the fluxes.
 
 class MassInf
