@@ -23,8 +23,8 @@ class MassInf
 		int numObjects;
 		std::vector<double> x, y, mass;
 
-		// Flux distribution properties
-		
+		// Mass distribution properties
+		virtual double generateMass();
 
 	public:
 		MassInf(int maxNumObjects, double xMin, double xMax,

@@ -35,8 +35,13 @@ void MassInf::fromPrior()
 	{
 		x[i] = xMin + xRange*randomU();
 		y[i] = yMin + yRange*randomU();
-		mass[i] = -log(randomU());
+		mass[i] = generateMass();
 	}
+}
+
+double MassInf::generateMass()
+{
+	return -log(randomU());
 }
 
 } // namespace Imaging
