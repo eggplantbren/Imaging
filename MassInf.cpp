@@ -41,7 +41,21 @@ void MassInf::fromPrior()
 
 double MassInf::generateMass()
 {
-	return -log(randomU());
+	return massInverseCDF(randomU());
+}
+
+double MassInf::massCDF(double x)
+{
+	double result = 0.;
+	if(x > 0.)
+		result = 1. - exp(-x);
+	return result;
+}
+
+double MassInf::massInverseCDF(double x)
+{
+	assert(x >= 0. && x <= 1.);
+	return -log(1. - x);
 }
 
 } // namespace Imaging

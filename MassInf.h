@@ -24,7 +24,10 @@ class MassInf
 		std::vector<double> x, y, mass;
 
 		// Mass distribution properties
-		virtual double generateMass();
+		virtual double massCDF(double x);
+		virtual double massInverseCDF(double x);
+
+		double generateMass();
 
 	public:
 		MassInf(int maxNumObjects, double xMin, double xMax,
