@@ -5,3 +5,7 @@ default:
 	g++ -o main *.o
 	rm -f *.o
 
+clean:
+	rm -f *.o
+	rm -f main
+
